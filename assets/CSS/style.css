@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  :root {
+    --primary: rgba(68, 88, 119, 1);
+    --secondary: rgba(146, 204, 206, 1);
+    --tertiary: rgba(49, 52, 61, 1);
+    --dark: rgba(28, 29, 33, 1);
+    --light: rgba(238, 238, 247, 1);
+  }
+  
+  .webpage-title {
+    padding: 10px 10px 0px 75px;
+    background-color: var(--secondary);
+    color: var(--tertiary);
+    font-size: 3rem;
+  }
+  
+  /*! LINK ANIMATION - DON'T DELETE BELOW THIS LINE */
+  .nav-li {
+    display: flex;
+  }
+  
+  li[data-nav-link] {
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  a {
+    display: inline-block;
+    font-size: 1.3rem;
+    /* relative so that the pseudo element after is position relative
+       to this `a` element. */
+    position: relative;
+    padding: 5px;
+    border-bottom: 3px solid var(--secondary);
+    color: var(--secondary);
+    text-decoration: none;
+    color: var(--secondary);
+    z-index: 1;
+  }
+  
+  a::after {
+    /* this pseudo element will be place in an absolute position
+       within the `a` parent element */
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* `scaleY` will scale down the pseudo element to 0 so that
+        is not visible. */
+    transform: scaleY(0);
+    transform-origin: bottom center;
+    background: var(--secondary);
+    z-index: -1;
+    /* `transform` is the time it will take for the transition
+        to complete. */
+    transition: transform 0.8s;
+  }
+  
+  a:hover {
+    color: var(--dark);
+  }
+  
+  a:hover::after {
+    /* scales the pseudo element up 100% so that is visible */
+    transform: scaleY(1);
+  }
+  
+  /*! LINK ANIMATION - DON'T DELETE ABOVE THIS LINE */
+  
+  header {
+    display: flex;
+    background-color: var(--tertiary);
+    padding: 10px 250px 10px 0px;
+    justify-content: space-between;
+  }
+  
+  /* ! NAVIGATION LINKS ON HEADER */
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  ul {
+    text-align: right;
+    padding-right: 30px;
+    list-style-type: none;
+  }
+  
+  /* ! HERO BANNER */
+  .banner {
+    grid-area: banner;
+    display: flex;
+    justify-content: flex-end;
+  ... (84 lines left)
