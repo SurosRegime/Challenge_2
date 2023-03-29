@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 0;
     margin: 0;
   }
@@ -44,8 +45,9 @@
   }
   
   a::after {
-    /* this pseudo element will be place in an absolute position
+    /* this pseudo element will be placed in an absolute position
        within the `a` parent element */
+    display: flex;
     position: absolute;
     content: "";
     bottom: 0;
@@ -93,9 +95,105 @@
     list-style-type: none;
   }
   
-  /* ! HERO BANNER */
-  .banner {
-    grid-area: banner;
+  /* HERO BANNER */
+  .hero {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 25px;
+    background: linear-gradient(0deg, rgba(31, 83, 161, 0.534), rgba(31, 83, 161, 0.534)), url(../images/02-hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
     display: flex;
+    position: relative;
+}
+h2.subtitle {
+    color:var(--tertiary);
+    background-color: var(--secondary);
+    margin-top: 8%;
+    margin-left: 90%;
+    margin-bottom: auto;
+  
+}
+section {
+    border-right: 3px solid var(--primary);
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 15px;
+    font-size: xx-large;
+  }
+section1 {
+    flex: 0 0 77%;
+    flex-wrap: wrap;
+  }
+  .aside1 {
+    padding: 10px 10px 0px 75px;
+    background-color: var(--light);
+    color: var(--tertiary);
+    font-size: 3rem;
+  }
+  /* IMAGES SECTION */
+div.Surf {
+  background-image: url(../images/02-portfolio-4.jpg);
+    background-position: top;
+    background-size: cover;
+    border: 8px solid var(--secondary);
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    height: 35em;
     justify-content: flex-end;
-  ... (84 lines left)
+    margin-left: 12%;
+    margin-right: 50%;
+}
+div.LED {
+  background-image: url(../images/02-portfolio-1.jpg);
+    background-position: top;
+    background-size: cover;
+    border: 8px solid var(--secondary);
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    height: 35em;
+    justify-content: flex-end;
+    margin-left: 12%;
+    margin-right: 50%;
+}
+div.Calculator {
+    background-image: url(../images/02-portfolio-2.jpg);
+    background-position: top;
+    background-size: cover;
+    border: 8px solid var(--secondary);
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    height: 35em;
+    justify-content: flex-end;
+    margin-left: 12%;
+    margin-right: 50%;
+}
+div.Pastel {
+    background-image: url(../images/02-portfolio-3.jpg);
+    background-position: top;
+    background-size: cover;
+    border: 8px solid var(--secondary);
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    height: 35em;
+    justify-content: flex-end;
+    margin-left: 12%;
+    margin-right: 50%;
+}
+div.Buddy {
+    background-image: url(../images/02-run-buddy.jpg);
+    background-position: top;
+    background-size: cover;
+    border: 8px solid var(--secondary);
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    height: 35em;
+    justify-content: flex-end;
+    margin-left: 12%;
+    margin-right: 50%;
+}
